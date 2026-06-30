@@ -1,0 +1,119 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotel Voucher - Tehran</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Courier New', Courier, monospace; background: #e6e9ef; display: flex; justify-content: center; padding: 40px 20px; }
+  .voucher { max-width: 850px; width: 100%; background: #ffffff; padding: 40px 45px; border: 3px solid #1a2a4a; box-shadow: 0 12px 35px rgba(0,0,0,0.2); border-radius: 4px; }
+  .header { text-align: center; border-bottom: 3px double #1a2a4a; padding-bottom: 15px; margin-bottom: 25px; }
+  .header h1 { font-size: 28px; letter-spacing: 4px; color: #1a2a4a; text-transform: uppercase; }
+  .header h2 { font-size: 18px; color: #3a4a6a; font-weight: normal; margin-top: 4px; }
+  .ref { display: flex; justify-content: space-between; background: #f0f3f8; padding: 10px 15px; margin-bottom: 25px; font-size: 14px; border-left: 5px solid #1a2a4a; }
+  .section { margin-bottom: 22px; }
+  .section-title { background: #1a2a4a; color: #fff; padding: 6px 14px; font-size: 16px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; display: inline-block; margin-bottom: 12px; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .info-row { display: flex; padding: 5px 0; border-bottom: 1px dashed #ddd; }
+  .info-label { width: 140px; font-weight: bold; color: #1a2a4a; }
+  .info-value { flex: 1; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+  th { background: #1a2a4a; color: #fff; padding: 8px 10px; text-align: left; font-size: 14px; }
+  td { padding: 8px 10px; border-bottom: 1px solid #ddd; font-size: 14px; }
+  .highlight-box { background: #f7f9fc; border: 1px solid #ccc; padding: 15px 20px; margin: 15px 0; border-radius: 4px; }
+  .footer { margin-top: 30px; border-top: 2px solid #1a2a4a; padding-top: 20px; display: flex; justify-content: space-between; font-size: 14px; }
+  .signature { margin-top: 15px; }
+  .notice { background: #fff3e0; padding: 12px 18px; border-left: 6px solid #d32f2f; font-size: 14px; margin: 15px 0; }
+  @media print { body { background: #fff; padding: 10px; } .voucher { box-shadow: none; border: 2px solid #000; } }
+</style>
+</head>
+<body>
+<div class="voucher">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>🏨 Hotel Confirmation Voucher</h1>
+    <h2>Espinas Palace Hotel – Tehran, Iran</h2>
+  </div>
+
+  <!-- REFERENCE -->
+  <div class="ref">
+    <span><strong>Booking Ref:</strong> HT-8765-THR</span>
+    <span><strong>Issue Date:</strong> 25 Jun 2026</span>
+    <span><strong>Agency:</strong> Sky Air Marketing (ISB)</span>
+  </div>
+
+  <!-- HOTEL INFO -->
+  <div class="section">
+    <div class="section-title">Hotel Details</div>
+    <div class="grid-2">
+      <div><strong>Hotel Name:</strong> Espinas Palace Hotel</div>
+      <div><strong>Contact:</strong> +98 21 1234 5678</div>
+      <div><strong>Address:</strong> North Zafar St., Shahriari Sq., Tehran</div>
+      <div><strong>Email:</strong> reservations@espinaspalace.com</div>
+    </div>
+  </div>
+
+  <!-- STAY DATES -->
+  <div class="section">
+    <div class="section-title">Check-in / Check-out</div>
+    <div class="grid-2">
+      <div><strong>Check-in:</strong> 30 June 2026 (from 15:00 hrs)</div>
+      <div><strong>Check-out:</strong> 14 July 2026 (until 12:00 hrs)</div>
+      <div><strong>Total Nights:</strong> 14 Nights</div>
+      <div><strong>Room Type:</strong> 2 x Deluxe Twin (Non-Smoking)</div>
+    </div>
+  </div>
+
+  <!-- PASSENGERS -->
+  <div class="section">
+    <div class="section-title">Guest List (as per passport)</div>
+    <table>
+      <tr><th>#</th><th>Passenger Name</th><th>Passport No.</th><th>Date of Birth</th></tr>
+      <tr><td>1</td><td>MR SALMAN HASSAN</td><td>RG6806131</td><td>01 Apr 1998</td></tr>
+      <tr><td>2</td><td>MR INSHAD HUSSAIN</td><td>UK6903682</td><td>21 Apr 1994</td></tr>
+      <tr><td>3</td><td>MR TAQI RAZA</td><td>GB9892583</td><td>12 Apr 1989</td></tr>
+    </table>
+  </div>
+
+  <!-- MEAL & REQUESTS -->
+  <div class="section">
+    <div class="section-title">Services & Requests</div>
+    <div class="grid-2">
+      <div><strong>Meal Plan:</strong> Half Board (Breakfast + Dinner)</div>
+      <div><strong>Special Requests:</strong> Connecting rooms, extra pillows</div>
+    </div>
+  </div>
+
+  <!-- PAYMENT -->
+  <div class="highlight-box">
+    <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+      <span><strong>Total Stay Cost:</strong> USD 2,450.00 (taxes incl.)</span>
+      <span><strong>Payment Status:</strong> ✅ Paid in Full via Agency</span>
+    </div>
+  </div>
+
+  <!-- NOTICE -->
+  <div class="notice">
+    <strong>⛔ IMPORTANT NOTICE:</strong> Refund / Cancellation is <u>ONLY</u> permitted through the issuing agency 
+    (Sky Air Marketing Pvt Ltd ISB - IRM). This voucher must be presented at check-in.
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div>
+      <strong>Issued by:</strong> Sky Air Marketing Pvt Ltd ISB (IRM)<br>
+      <span style="font-size:13px;">Authorized Signature: __________________________</span>
+    </div>
+    <div style="text-align: right;">
+      <span style="font-size:13px;">Stamp: [COMPANY STAMP]</span><br>
+      <span style="font-size:12px; color:#555;">Voucher valid for dates specified only</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
