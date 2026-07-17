@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="description" content="Tower Balance 3D Privacy Policy. How Funzar Labs collects, uses, and protects your information." />
+<meta name="theme-color" content="#fbf8f3" />
+<title>Tower Balance 3D Privacy Policy · Funzar Labs</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>  :root {
+    --bg: #fbf8f3; --bg-elev: #ffffff; --bg-deep: #f0eadb;
+    --border: rgba(26,26,36,0.06); --border-strong: rgba(26,26,36,0.1);
+    --text: #1a1a24; --text-soft: #3a3a48; --text-dim: #6b6b78; --text-faint: #a0a098;
+    --accent: #d89b1d; --accent-bright: #e2a93b; --accent-deep: #a87410;
+    --accent-soft: rgba(216,155,29,0.1); --accent-tint: #fbf2dc; --green: #10b981;
+    --display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --mono: 'Inter', ui-monospace, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  *::selection { background: var(--accent); color: #fff; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: var(--display);
+    font-feature-settings: 'ss01','ss02','cv11'; -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden; line-height: 1.6; letter-spacing: -0.011em; }
+  .ambient { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+  .ambient::before { content: ''; position: absolute; top: -20%; left: 50%; transform: translateX(-50%);
+    width: 1000px; height: 1000px; background: radial-gradient(circle, rgba(216,155,29,0.12) 0%, transparent 50%); filter: blur(60px); }
+  .dot-grid { position: fixed; inset: 0; z-index: 1; pointer-events: none;
+    background-image: radial-gradient(circle, rgba(26,26,36,0.06) 1px, transparent 1px); background-size: 24px 24px;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, #000 30%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, #000 30%, transparent 100%); }
+  .particles { position: fixed; inset: 0; z-index: 2; pointer-events: none; overflow: hidden; }
+  .particle { position: absolute; border-radius: 50%; will-change: transform; opacity: 0; animation: particleFloat linear infinite; }
+  @keyframes particleFloat {
+    0% { transform: translate3d(0, 0, 0) scale(1); opacity: 0; }
+    10% { opacity: var(--max-opacity, 0.5); }
+    90% { opacity: var(--max-opacity, 0.5); }
+    100% { transform: translate3d(var(--drift-x, 0), -110vh, 0) scale(0.6); opacity: 0; } }
+  .container { position: relative; z-index: 10; max-width: 800px; margin: 0 auto; padding: 24px clamp(20px, 4vw, 48px); }
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; gap: 16px; opacity: 0; animation: fadeIn 0.6s 0.1s ease forwards; }
+  .nav-brand { display: flex; align-items: center; text-decoration: none; flex-shrink: 1; min-width: 0; }
+  .nav-brand-img { height: 46px; width: auto; max-width: 100%; display: block; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.05)); }
+  .nav-back { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; background: var(--bg-elev);
+    border: 1px solid var(--border); border-radius: 100px; font-family: var(--display); font-size: 13px; color: var(--text-dim);
+    text-decoration: none; transition: all 0.2s; flex-shrink: 0; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+  .nav-back:hover { color: var(--text); border-color: var(--border-strong); transform: translateY(-1px); }
+  @media (min-width: 720px) { .nav-brand-img { height: 56px; } }
+  @media (max-width: 480px) { .nav-brand-img { height: 38px; } .nav-back { padding: 6px 12px; font-size: 12px; } }
+  .header { text-align: center; padding: clamp(40px, 8vh, 80px) 0 clamp(32px, 5vh, 56px); opacity: 0; animation: fadeUp 0.8s 0.3s cubic-bezier(0.22,1,0.36,1) forwards; }
+  .pill { display: inline-flex; align-items: center; gap: 10px; padding: 6px 14px 6px 6px; background: var(--bg-elev);
+    border: 1px solid var(--border); border-radius: 100px; font-family: var(--mono); font-size: 12px; color: var(--text-dim);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03); margin-bottom: 24px; }
+  .pill .pill-tag { background: var(--accent); color: #fff; padding: 3px 10px; border-radius: 100px; font-size: 10px; font-weight: 600; letter-spacing: 0.02em; text-transform: uppercase; }
+  h1 { font-family: var(--display); font-weight: 600; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.05; letter-spacing: -0.04em; color: var(--text); margin-bottom: 8px; }
+  .app-name { font-family: var(--display); font-weight: 500; font-size: clamp(1rem, 2vw, 1.2rem); color: var(--accent-deep); margin-bottom: 16px; letter-spacing: -0.01em; }
+  .header-meta { font-family: var(--mono); font-size: 12px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.08em;
+    display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 16px; }
+  .header-meta span { display: inline-flex; align-items: center; gap: 6px; }
+  .header-meta .dot { width: 4px; height: 4px; background: var(--text-faint); border-radius: 50%; }
+  .toc { background: var(--bg-elev); border: 1px solid var(--border); border-radius: 16px; padding: 24px; margin-bottom: clamp(40px, 6vh, 64px);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04); opacity: 0; animation: fadeUp 0.8s 0.45s cubic-bezier(0.22,1,0.36,1) forwards; }
+  .toc-label { font-family: var(--mono); font-size: 11px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .toc-label::before { content: ''; width: 5px; height: 5px; background: var(--accent); border-radius: 50%; }
+  .toc ol { list-style: none; counter-reset: toc; display: grid; grid-template-columns: 1fr; gap: 4px; }
+  @media (min-width: 600px) { .toc ol { grid-template-columns: 1fr 1fr; gap: 4px 24px; } }
+  .toc li { counter-increment: toc; font-size: 14px; }
+  .toc a { display: flex; align-items: baseline; gap: 10px; padding: 6px 0; color: var(--text-soft); text-decoration: none; transition: color 0.2s; }
+  .toc a::before { content: counter(toc, decimal-leading-zero); font-family: var(--mono); font-size: 11px; color: var(--text-faint); flex-shrink: 0; }
+  .toc a:hover { color: var(--accent-deep); }
+  main { opacity: 0; animation: fadeUp 0.8s 0.6s cubic-bezier(0.22,1,0.36,1) forwards; }
+  section { margin-bottom: clamp(40px, 6vh, 56px); scroll-margin-top: 80px; }
+  section:last-child { margin-bottom: 0; }
+  .section-num { font-family: var(--mono); font-size: 11px; color: var(--accent); text-transform: uppercase; letter-spacing: 0.12em; display: inline-block; margin-bottom: 8px; }
+  h2 { font-family: var(--display); font-weight: 600; font-size: clamp(1.4rem, 2.8vw, 1.85rem); letter-spacing: -0.025em; line-height: 1.2; color: var(--text); margin-bottom: 16px; }
+  h3 { font-family: var(--display); font-weight: 500; font-size: 1.05rem; color: var(--text); margin-top: 24px; margin-bottom: 8px; letter-spacing: -0.01em; }
+  p { color: var(--text-soft); font-size: 15px; line-height: 1.65; margin-bottom: 14px; }
+  p:last-child { margin-bottom: 0; }
+  ul { list-style: none; margin-bottom: 14px; }
+  ul li { color: var(--text-soft); font-size: 15px; line-height: 1.65; padding-left: 22px; position: relative; margin-bottom: 8px; }
+  ul li::before { content: ''; position: absolute; left: 6px; top: 11px; width: 5px; height: 5px; background: var(--accent); border-radius: 50%; }
+  strong { color: var(--text); font-weight: 600; }
+  a { color: var(--accent-deep); text-decoration: none; border-bottom: 1px solid var(--accent-soft); transition: border-color 0.2s, color 0.2s; }
+  a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  .callout { background: var(--accent-tint); border: 1px solid var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 12px; padding: 20px 24px; margin: 20px 0; }
+  .callout p { color: var(--text-soft); margin-bottom: 8px; font-size: 14.5px; }
+  .callout p:last-child { margin-bottom: 0; }
+  .callout-label { font-family: var(--mono); font-size: 10px; font-weight: 600; color: var(--accent-deep); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; display: block; }
+  .data-table { margin: 20px 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: var(--bg-elev); }
+  .data-row { display: grid; grid-template-columns: 1fr; gap: 4px; padding: 16px 20px; border-bottom: 1px solid var(--border); }
+  @media (min-width: 600px) { .data-row { grid-template-columns: 200px 1fr; gap: 16px; align-items: baseline; } }
+  .data-row:last-child { border-bottom: none; }
+  .data-row .data-type { font-family: var(--mono); font-size: 11px; color: var(--accent-deep); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
+  .data-row .data-desc { font-size: 14px; color: var(--text-soft); line-height: 1.55; }
+  .contact-card { background: linear-gradient(180deg, #ffffff 0%, var(--accent-tint) 100%); border: 1px solid var(--border); border-radius: 20px;
+    padding: clamp(28px, 5vw, 40px); margin-top: clamp(40px, 6vh, 64px); text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .contact-card h2 { margin-bottom: 12px; }
+  .contact-card p { max-width: 48ch; margin: 0 auto 20px; color: var(--text-dim); }
+  .contact-btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; background: var(--text); color: #fff; border-radius: 12px;
+    font-family: var(--display); font-weight: 500; font-size: 14px; text-decoration: none; border: none; transition: all 0.2s; box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+  .contact-btn:hover { background: #000; transform: translateY(-1px); box-shadow: 0 10px 30px -10px rgba(0,0,0,0.3); }
+  .contact-btn .arrow { transition: transform 0.2s; }
+  .contact-btn:hover .arrow { transform: translateX(2px); }
+  footer { margin-top: clamp(48px, 10vh, 96px); padding: 32px 0 24px; border-top: 1px solid var(--border); display: flex; justify-content: space-between;
+    align-items: center; flex-wrap: wrap; gap: 16px; font-family: var(--mono); font-size: 12px; color: var(--text-faint); }
+  footer a { color: var(--text-dim); text-decoration: none; border-bottom: none; transition: color 0.2s; padding: 4px 0; }
+  footer a:hover { color: var(--text); }
+  footer .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+  @keyframes fadeIn { to { opacity: 1; } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 640px) {
+    footer { justify-content: center; text-align: center; flex-direction: column; }
+    footer .footer-links { justify-content: center; gap: 16px 20px; } }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+    .particle { display: none; } }
+</style>
+</head>
+<body>
+
+<div class="ambient"></div>
+<div class="dot-grid"></div>
+<div class="particles" id="particles"></div>
+
+<div class="container">
+
+  <nav>
+    <a href="index.html" class="nav-brand">
+      <img src="data:image/png;base64,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" alt="Funzar Labs" class="nav-brand-img" />
+    </a>
+    <a href="index.html" class="nav-back"><span>&#8592;</span><span>Back</span></a>
+  </nav>
+
+  <header class="header">
+    <div class="pill">
+      <span class="pill-tag">Legal</span>
+      <span>Last updated 17 July 2026</span>
+    </div>
+    <h1>Privacy Policy</h1>
+    <div class="app-name">Tower Balance 3D</div>
+    <div class="header-meta">
+      <span>Android App</span>
+      <span class="dot"></span>
+      <span>Rated for 3+</span>
+      <span class="dot"></span>
+      <span>v1.0</span>
+    </div>
+  </header>
+
+  <div class="toc">
+    <div class="toc-label">Contents</div>
+    <ol>
+      <li><a href="#intro">Introduction</a></li>
+      <li><a href="#summary">Google Play Data Safety summary</a></li>
+      <li><a href="#what-we-collect">What we collect</a></li>
+      <li><a href="#how-we-use">How we use it</a></li>
+      <li><a href="#third-parties">Third-party services</a></li>
+      <li><a href="#adid">Advertising ID &amp; Choices</a></li>
+      <li><a href="#ads">Advertising</a></li>
+      <li><a href="#notifications">Push notifications</a></li>
+      <li><a href="#children">Children's privacy</a></li>
+      <li><a href="#rights">Your rights &amp; choices</a></li>
+      <li><a href="#security">Data security</a></li>
+      <li><a href="#retention">Data retention</a></li>
+      <li><a href="#international">International users</a></li>
+      <li><a href="#contact">Changes &amp; contact</a></li>
+    </ol>
+  </div>
+
+  <main>
+
+    <section id="intro">
+      <span class="section-num">01 - Introduction</span>
+      <h2>About this policy.</h2>
+      <p>This Privacy Policy applies to <strong>Tower Balance 3D</strong> (the "App"), a free mobile game developed and published by <strong>Funzar Labs</strong> ("we," "us," "our") on Google Play. It explains what information is collected when you use the App, what it is used for, and the choices you have.</p>
+      <p>Tower Balance 3D is a casual stacking game rated <strong>for 3+</strong> on Google Play. The App is free to download and play, supported by advertising. There are no in-app purchases.</p>
+      <p>By downloading, installing, or using the App, you agree to the practices described here. If you do not agree, please do not use the App.</p>
+      <div class="callout">
+        <span class="callout-label">Quick summary</span>
+        <p>Tower Balance 3D collects only what is needed to run the game, show ads, and send optional notifications. Your game progress is stored on your device. We don't sell your personal data, and we never ask for your name, email, or location. You can turn off personalized ads and notifications any time in your device settings.</p>
+      </div>
+    </section>
+
+    <section id="summary">
+      <span class="section-num">02 - Data Safety</span>
+      <h2>Google Play Data Safety summary.</h2>
+      <p>The following reflects the Data Safety section shown on our Google Play listing - what the App collects, why, and whether it is shared.</p>
+      <div class="data-table">
+        <div class="data-row">
+          <div class="data-type">Device or other IDs</div>
+          <div class="data-desc">Advertising ID (GAID) and similar identifiers - used for showing ads and ad measurement. Shared with our ad partners.</div>
+        </div>
+        <div class="data-row">
+          <div class="data-type">Ad interactions</div>
+          <div class="data-desc">Which ads were shown, viewed, or clicked - used by our ad partners for ad delivery, frequency capping, and measurement.</div>
+        </div>
+        <div class="data-row">
+          <div class="data-type">Push token</div>
+          <div class="data-desc">If you allow notifications, a push token is created so we can send occasional game updates. It does not identify you personally.</div>
+        </div>
+      </div>
+      <p>Data is encrypted in transit. We do <strong>not</strong> collect your name, email address, phone number, physical address, photos, contacts, health data, financial information, or precise location. Your gameplay progress and scores are stored <strong>locally on your device</strong>. We do <strong>not</strong> sell your personal information, and <strong>the App does not offer in-app purchases.</strong></p>
+    </section>
+
+    <section id="what-we-collect">
+      <span class="section-num">03 - Information We Collect</span>
+      <h2>What we collect.</h2>
+      <h3>Automatically collected</h3>
+      <ul>
+        <li><strong>Device identifiers</strong> - your Advertising ID (GAID), a resettable identifier provided by Google Play services, and similar device identifiers.</li>
+        <li><strong>Device &amp; system information</strong> - device model, Android version, language, region, and screen size, used by ad partners to serve compatible ads.</li>
+        <li><strong>Ad interaction data</strong> - which ads were shown, viewed, or clicked, used for ad measurement and to avoid repeating the same ad.</li>
+        <li><strong>Push notification token</strong> - created only if you grant notification permission.</li>
+      </ul>
+      <h3>Stored on your device only</h3>
+      <ul>
+        <li><strong>Gameplay data</strong> - your scores, high score, coins, unlocked skins, and settings are saved locally on your device (and in the device's app storage backup). They are not uploaded to our servers.</li>
+      </ul>
+      <h3>We do not collect</h3>
+      <ul>
+        <li>Your name, email address, or phone number.</li>
+        <li>Your precise GPS location.</li>
+        <li>Your contacts, photos, calendar, or microphone data.</li>
+        <li>Health, fitness, biometric, or sensitive personal information.</li>
+        <li>Payment information - the App has no in-app purchases.</li>
+      </ul>
+    </section>
+
+    <section id="how-we-use">
+      <span class="section-num">04 - How We Use It</span>
+      <h2>How we use your information.</h2>
+      <ul>
+        <li>Operate the App and save your game progress on your device.</li>
+        <li>Show ads inside the App and measure their effectiveness.</li>
+        <li>Send optional push notifications about game updates (only with your permission).</li>
+        <li>Detect, prevent, and address fraud, abuse, or technical issues.</li>
+        <li>Comply with legal obligations.</li>
+      </ul>
+    </section>
+
+    <section id="third-parties">
+      <span class="section-num">05 - Third Parties</span>
+      <h2>Third-party services we use.</h2>
+      <p>Tower Balance 3D uses the following third-party services. Each handles your data under its own privacy policy:</p>
+
+      <h3>Google Play</h3>
+      <p>Google distributes the App and processes downloads and updates. See the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
+
+      <h3>CleverAdsSolutions (CAS.AI)</h3>
+      <p>We use CAS as our ad mediation platform. CAS shows ads from multiple ad networks (such as Google AdMob, Meta Audience Network, Unity Ads, AppLovin, ironSource, and others) and may collect device identifiers and ad interaction data. See the <a href="https://cas.ai/privacy-policy/" target="_blank" rel="noopener">CAS Privacy Policy</a> and the <a href="https://cas.ai/network-policies/" target="_blank" rel="noopener">policies of the underlying ad networks</a>.</p>
+
+      <h3>Google Firebase (Cloud Messaging)</h3>
+      <p>We use Firebase Cloud Messaging only to deliver push notifications you have opted into. Firebase processes a push token and basic device information for delivery. See <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy &amp; Security</a>.</p>
+
+      <h3>Google Play services</h3>
+      <p>Provides the Advertising ID and ad-measurement APIs used to attribute ad campaigns without identifying you personally. See the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
+
+      <p>These providers may use SDKs and device identifiers solely to perform the services we engage them for. <strong>We do not sell your personal data to any of them.</strong></p>
+    </section>
+
+    <section id="adid">
+      <span class="section-num">06 - Advertising ID</span>
+      <h2>Advertising ID and your choices.</h2>
+      <p>On Android, advertising is based on your device's <strong>Advertising ID (GAID)</strong> - a resettable identifier provided by Google Play services. The App and its ad partners may use it to show ads and measure their performance.</p>
+      <ul>
+        <li><strong>Reset your Advertising ID:</strong> open <strong>Settings &#8594; Privacy &#8594; Ads</strong> (on some devices <strong>Settings &#8594; Google &#8594; Ads</strong>) and tap "Reset advertising ID".</li>
+        <li><strong>Opt out of personalized ads:</strong> in the same screen, choose "Delete advertising ID" or "Opt out of Ads Personalization." You will still see ads, but they will not be personalized. The game works exactly the same.</li>
+      </ul>
+      <p>These controls are provided by Android and Google. Menu names vary slightly by device and Android version.</p>
+    </section>
+
+    <section id="ads">
+      <span class="section-num">07 - Advertising</span>
+      <h2>How advertising works.</h2>
+      <p>Tower Balance 3D is free to play. To support development, we show ads inside the App:</p>
+      <ul>
+        <li><strong>Banner ads</strong> - a small ad shown at the bottom of the screen.</li>
+        <li><strong>Interstitial ads</strong> - a full-screen ad shown at natural break points, such as between rounds.</li>
+        <li><strong>Rewarded ads</strong> - optional ads you can choose to watch in exchange for in-game benefits (such as continuing your tower after a miss).</li>
+      </ul>
+      <p>Ads are served through <strong>CleverAdsSolutions (CAS.AI)</strong>, which mediates between multiple ad networks. Ad content is controlled by these networks, not by Funzar Labs. We work to keep ads age-appropriate, but cannot guarantee every ad will match every player's preferences.</p>
+      <p>If you see an inappropriate ad, please report it to <a href="mailto:hello@funzarlabs.com">hello@funzarlabs.com</a> with a screenshot if possible - we'll investigate with our ad partners.</p>
+    </section>
+
+    <section id="notifications">
+      <span class="section-num">08 - Notifications</span>
+      <h2>Push notifications.</h2>
+      <p>The App may ask permission to send push notifications - for example, occasional reminders or news about updates. Notifications are entirely optional:</p>
+      <ul>
+        <li><strong>Decline the permission</strong> when first asked, and no notifications will ever be sent.</li>
+        <li><strong>Turn them off later</strong> at any time in <strong>Settings &#8594; Notifications &#8594; Tower Balance 3D</strong>.</li>
+      </ul>
+      <p>Notification delivery uses Firebase Cloud Messaging. The push token created for delivery is not used for advertising.</p>
+    </section>
+
+    <section id="children">
+      <span class="section-num">09 - Children</span>
+      <h2>Children's privacy.</h2>
+      <p>Tower Balance 3D is rated <strong>for 3+</strong> on Google Play and may be enjoyed by players of all ages. We design the App to be family-friendly:</p>
+      <ul>
+        <li><strong>No in-app purchases</strong> - children cannot accidentally spend money.</li>
+        <li><strong>No social features</strong> - no chat, messaging, or user-generated content.</li>
+        <li><strong>No personal data collection</strong> - we never ask for names, emails, or phone numbers.</li>
+      </ul>
+      <p>We do not knowingly collect personally identifiable information from children under 13 (or the equivalent minimum age in your country) without verifiable parental consent, as required by COPPA and similar laws. If you believe your child has provided personal information, contact <a href="mailto:hello@funzarlabs.com">hello@funzarlabs.com</a> and we will delete it promptly.</p>
+      <h3>Parental controls</h3>
+      <p>Android and Google Play offer parental controls through <strong>Google Family Link</strong> and Google Play's content settings. We recommend using these to manage your child's app usage.</p>
+    </section>
+
+    <section id="rights">
+      <span class="section-num">10 - Your Rights</span>
+      <h2>Your rights &amp; choices.</h2>
+      <ul>
+        <li><strong>Access / Delete</strong> - request information about, or deletion of, data linked to your device by emailing us.</li>
+        <li><strong>Limit ad tracking</strong> - reset your Advertising ID or opt out of Ads Personalization in device settings (see Section 06).</li>
+        <li><strong>Notifications</strong> - disable any time in device settings.</li>
+        <li><strong>Delete the App</strong> - uninstalling stops all further data collection from your device.</li>
+      </ul>
+      <p>To exercise these rights, email <a href="mailto:hello@funzarlabs.com">hello@funzarlabs.com</a>. We respond within 30 days.</p>
+      <h3>For users in the EU / UK (GDPR)</h3>
+      <p>You additionally have rights to data portability, restriction of processing, objection, and to lodge a complaint with your local authority. Our legal bases are consent (advertising, notifications) and legitimate interest (fraud prevention, service operation). A consent dialog is shown where required by law.</p>
+      <h3>For users in California (CCPA / CPRA)</h3>
+      <p>California residents may know, delete, and opt out of the sale or sharing of personal information. <strong>We do not sell personal information.</strong> Sharing of device identifiers for advertising may be considered "sharing" under CPRA - you can opt out using the controls in Section 06.</p>
+    </section>
+
+    <section id="security">
+      <span class="section-num">11 - Security</span>
+      <h2>How we protect your data.</h2>
+      <p>All network requests use encrypted connections (HTTPS / TLS). We keep our SDKs and dependencies up to date and review them regularly. No method of transmission or storage is 100% secure; if a security incident affects your data, we will notify you and the relevant authorities as required by law.</p>
+    </section>
+
+    <section id="retention">
+      <span class="section-num">12 - Retention</span>
+      <h2>How long data is kept.</h2>
+      <ul>
+        <li><strong>Gameplay data</strong> - stays on your device; removed when you uninstall the App or clear its data.</li>
+        <li><strong>Ad interaction data</strong> - retained by CAS and the underlying ad networks per their policies (typically 90-180 days).</li>
+        <li><strong>Push tokens</strong> - invalidated when you uninstall the App or disable notifications.</li>
+        <li><strong>Device identifiers</strong> - deleted from ad systems when you reset your Advertising ID or uninstall the App.</li>
+      </ul>
+    </section>
+
+    <section id="international">
+      <span class="section-num">13 - International</span>
+      <h2>International users.</h2>
+      <p>Funzar Labs is based in <strong>Pakistan</strong>. Our third-party providers (Google, Firebase, CAS and its ad networks) operate globally and may process information in other countries, including the United States and the European Union. We use providers that maintain industry-standard safeguards and, where required, standard contractual clauses.</p>
+    </section>
+
+    <section id="contact">
+      <span class="section-num">14 - Changes &amp; Contact</span>
+      <h2>Changes to this policy &amp; contact.</h2>
+      <p>We may update this Privacy Policy from time to time. Material changes will be reflected in the "Last updated" date above and, where appropriate, in the Google Play listing. Continued use of the App after changes take effect means you accept the updated policy.</p>
+      <p><strong>Funzar Labs</strong><br/>
+      Website: <a href="https://funzarlabs.com" target="_blank" rel="noopener">funzarlabs.com</a><br/>
+      Email: <a href="mailto:hello@funzarlabs.com">hello@funzarlabs.com</a></p>
+    </section>
+
+    <div class="contact-card">
+      <h2>Get in touch.</h2>
+      <p>Email is the fastest way to reach a real person at Funzar Labs. We aim to respond within two business days.</p>
+      <a href="mailto:hello@funzarlabs.com" class="contact-btn">hello@funzarlabs.com <span class="arrow">&#8594;</span></a>
+    </div>
+
+  </main>
+
+  <footer>
+    <div>&copy; 2026 Funzar Labs &middot; funzarlabs.com</div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Website Privacy</a>
+      <a href="https://www.instagram.com/funzar.labs/" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:hello@funzarlabs.com">Contact</a>
+    </div>
+  </footer>
+
+</div>
+
+<script>  (function() {
+    const container = document.getElementById('particles');
+    if (!container) return;
+    const isMobile = window.innerWidth < 720;
+    const COUNT = isMobile ? 14 : 28;
+
+    function makeParticle() {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      const size = 2 + Math.random() * 5;
+      const isAccent = Math.random() < 0.18;
+      const startX = Math.random() * 100;
+      const driftX = (Math.random() - 0.5) * 200;
+      const duration = 18 + Math.random() * 22;
+      const delay = -Math.random() * duration;
+      const opacity = isAccent ? 0.35 + Math.random() * 0.25 : 0.15 + Math.random() * 0.2;
+      p.style.width = size + 'px';
+      p.style.height = size + 'px';
+      p.style.left = startX + 'vw';
+      p.style.bottom = '-20px';
+      p.style.background = isAccent ? 'rgba(216, 155, 29, 0.9)' : 'rgba(0, 0, 0, 0.5)';
+      if (isAccent) p.style.boxShadow = '0 0 ' + (size * 2) + 'px rgba(216, 155, 29, 0.6)';
+      p.style.setProperty('--drift-x', driftX + 'px');
+      p.style.setProperty('--max-opacity', opacity);
+      p.style.animationDuration = duration + 's';
+      p.style.animationDelay = delay + 's';
+      container.appendChild(p);
+    }
+    for (let i = 0; i < COUNT; i++) makeParticle();
+  })();
+</script>
+
+</body>
+</html>
